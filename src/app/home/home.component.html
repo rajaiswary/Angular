@@ -1,0 +1,44 @@
+<!-- <h1>{{data}}</h1>
+
+<input type = "text" name = "data" [(ngModel)]="data">t
+<button [style.background] = "color">My Button</button>
+
+<input type="color" name = "color" [(ngModel)] = "color" />
+
+<input type = "range" min = "0" max = "10" name = "border" [(ngModel)] = "borderRadius"/> -->
+<!-- <h1>{{person.name}}</h1> -->
+<div class="container">
+    <h1 class = "text-center">User Details</h1>
+    <form >
+        <div>
+            <label>Name</label>
+            <input [(ngModel)] = "person.name" type = "text" name = "name" class = "form-control">
+        </div>
+        <div>
+            <label>Email</label>
+            <input [(ngModel)] = "person.email" type = "email" name = "email" class = "form-control">
+        </div>
+        <div>
+            <label>Age</label>
+            <input [(ngModel)] = "person.age" type = "number" name = "age" class = "form-control">
+        </div>
+        <button (click)="addUser()" class = "btn btn-primary">Save</button>
+    </form>
+
+    <section class = "my-5">
+        <table class = "table table-striped border">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+            <tr *ngFor = "let person of data">
+                <td>{{person.name}}</td>
+                <td>{{person.email}}</td>
+                <td>{{person.age}}</td>
+            </tr>
+
+        </table>
+    </section>
+</div>
+<!-- <button (click) = "addUser()">click me</button> -->
